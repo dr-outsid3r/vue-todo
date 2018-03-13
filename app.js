@@ -28,16 +28,16 @@ new Vue({
       return this.todos.find((task) => task.id == id)
     },
     addTask () {
-      const text = this.inputValue;
-      if (text) {
+      const ipnutEl = this.$refs.taskInput;
+      if (ipnutEl.value) {
         const taskId = this.todos.length + 1;
         this.todos.push({
           id: taskId,
-          text: this.inputValue,
+          text: ipnutEl.value,
           isDone: false,
           isDeleted: false
         });
-        this.inputValue = '';
+        ipnutEl.value = '';
       }
     },
     markAsDone (taskId) {
