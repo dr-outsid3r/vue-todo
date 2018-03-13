@@ -20,8 +20,7 @@ new Vue({
         isDone: false,
         isDeleted: false
       }
-    ],
-    inputValue: ''
+    ]
   },
   methods: {
     findTask (id) {
