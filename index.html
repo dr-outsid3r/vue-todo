@@ -11,7 +11,7 @@
         <div class="container">
           <div class="row justify-content-center no-gutters">
             <div class="col-6">
-              <h2 class="mt-5">Todo app 1.0.2</h2>
+              <h2 class="mt-5">Todo app 1.0.3</h2>
               <!-- Vue ToDo -->
               <div id="vue-todo">
                 <ul class="list-group mt-4">
@@ -22,8 +22,8 @@
                         <span :class="{done: todo.isDone}">{{ todo.text }}</span>
                       </div>
                       <div class="col-auto pr-2">
-                        <button @click="markAsDone( todo._id )" v-if="!todo.isDone" type="button" class="btn btn-sm btn-success">Done</button>
-                        <button @click="deleteTask( todo._id )" type="button" class="btn btn-sm btn-danger">Delete</button>
+                        <button @click="markAsDone( todo.id )" v-if="!todo.isDone" type="button" class="btn btn-sm btn-success">Done</button>
+                        <button @click="deleteTask( todo.id )" type="button" class="btn btn-sm btn-danger">Delete</button>
                       </div>
                     </div>
                   </li>
